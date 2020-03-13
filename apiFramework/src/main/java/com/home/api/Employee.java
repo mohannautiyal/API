@@ -85,6 +85,19 @@ public void setAddress(address address) {
 	this.address = address;
 }
 
+public Employee(int id, String name, String username, String email, com.home.api.address address, String phone,
+		String website, com.home.api.company company) {
+	super();
+	this.id = id;
+	this.name = name;
+	this.username = username;
+	this.email = email;
+	this.address = address;
+	this.phone = phone;
+	this.website = website;
+	this.company = company;
+}
+
 	
 
 }

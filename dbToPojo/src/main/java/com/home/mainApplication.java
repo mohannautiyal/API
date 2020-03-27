@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.List;
 
+import org.springframework.jdbc.core.BeanPropertyRowMapper;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 
@@ -24,6 +25,9 @@ public static void main(String[] args) throws IOException {
 	
 	jdbc = new JdbcTemplate(datasource.getdataSource());
 	//ResultSet rs = jdbc.execute("select * from emp");	
+	
+	System.out.println("========================= Object from Row Mapper =======================================");
+
 	
 	List<emp> employee =jdbc.query("select * from emp", new RowMapper<emp>() {
 
@@ -50,12 +54,23 @@ public static void main(String[] args) throws IOException {
 	
 	System.out.println(employee);
 	
+	System.out.println("========================= Json String =======================================");
+
 	
 	ObjectMapper Mapper = new ObjectMapper();
 	System.out.println(Mapper.writeValueAsString(employee));;
 	Mapper.writeValue(new File("emp.json"), employee);
 	
-	}
+	// Bean Property Row mapper to map db results to java object
+	
+	System.out.println("========================= Object from Bean Property Row Mapper =======================================");
+	
+	List<emp> employeeObj = jdbc.query("select * from emp",new BeanPropertyRowMapper<emp>(emp.class));
+	
+System.out.println(employeeObj);
+
+System.out.println(employee.equals(employeeObj));
+}
 
 	
 	

@@ -3,7 +3,7 @@ package com.home;
 public class classChild extends classParent{
 	
 	public classChild(String pName, int pNumber) {
-		super(pName,pNumber);
+		//super(pName,pNumber);
 		this.pName = pName;
 		this.pNumber = pNumber;
 	}

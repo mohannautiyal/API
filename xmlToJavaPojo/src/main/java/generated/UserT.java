@@ -13,6 +13,8 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElement;
 import javax.xml.bind.annotation.XmlType;
 
+import lombok.Data;
+
 
 /**
  * <p>Java class for UserT complex type.
@@ -36,8 +38,12 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "UserT", propOrder = {
     "userName"
+		
+		
 })
-public class UserT {
+
+@Data
+public  class UserT {
 
     @XmlElement(required = true)
     protected String userName;

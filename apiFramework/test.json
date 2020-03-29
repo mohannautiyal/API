@@ -1,1 +1,22 @@
-[{"add":{"city":"Gurgaon","zipCode":"122001","houseNo":"120"},"empName":"Madan Nautiyal","empId":"1234","designation":"Software Engineer"},{"add":{"city":"Delhi","zipCode":"10001","houseNo":"372"},"empName":"Mohn Nautiyal","empId":"123","designation":"Software Dev"}]
+[
+	{
+		"add": {
+			"city": "Gurgaon",
+			"zipCode": "122001",
+			"houseNo": "120"
+		},
+		"empName": "Madan Nautiyal",
+		"empId": "1234",
+		"designation": "Software Engineer"
+	},
+	{
+		"add": {
+			"city": "Delhi",
+			"zipCode": "10001",
+			"houseNo": "372"
+		},
+		"empName": "Mohn Nautiyal",
+		"empId": "123",
+		"designation": "Software Dev"
+	}
+]

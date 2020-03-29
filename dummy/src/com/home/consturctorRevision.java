@@ -12,7 +12,7 @@ public class consturctorRevision {
 		 * classChild c = new classChild(); c.setpName("child"); c.setpNumber(4567);
 		 * c.show();
 		 */
-		classParent P = new classChild("Child", 1234);
+	//	classParent P = new classChild("Child", 1234);
 		/*
 		 * P.setpName("parentName");
 		 * 
@@ -20,7 +20,7 @@ public class consturctorRevision {
 		 */
 		classParent P1 = new classParent("Parent", 5678);
 		
-		System.out.println(P.getpName()+" "+  P.cvar);
+	//	System.out.println(P.getpName()+" "+  P.cvar);
 		
 		System.out.println(P1.getpName()+" "+  P1.cvar);
 	}
